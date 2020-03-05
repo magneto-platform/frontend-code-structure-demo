@@ -55,15 +55,15 @@ The following code structure is for demo. It's an example.
 		- `index.js`
 		- `product.scss`
 		- `product.test.js`
-- React components should have uppercase name e.g. `Component.js`, `Product.js`, `Nav.js` ... etc.
-- Directory names should be lowercase or camelCase e.g. `actions`, `productList` ... etc.
+- React components should have uppercase name e.g. `Component.js`, `Product.js`, `ProductList`, `Nav.js` ... etc.
+- Directory names should be lowercase or camelCase (in case of two words) e.g. `actions`, `langHandler` ... etc.
 - Some components should be aggregated which means some components will be nested under other components. For example; assume that we have two components `Post` and `Comment`. Assume that the `Comment` component is a part of `Post` component. `Comment` component doesn't stand without `Post` component. In this case, the file structure should look like;
 	- `post/`
 		- `Post.js`
 		- `comment/`
 			- `Comment.js`
 - Avoid lengthy nested components.
-
+- Check out [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react) & [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ## Considerations ##
 - **Test Files**
@@ -79,8 +79,16 @@ The following code structure is for demo. It's an example.
 | --- | --- |
 | - e.g. `Post/index.js` | - e.g. `Post/Post.js` |
 | - It'll be pretty shorter during importing process like <br /><br /> `import Post from './../Post'` | - It'll be a bit lengthy during importing process like <br /><br /> `import Post from './../Post/Post'` |
-|  | - It may result in an issue during debugging. You'll see a lot of `index.js` files.<br />- You can use any of third parties to handle this concern. |
+| - It may result in an issue during debugging. You'll see a lot of `index.js` files.<br />- You can use any of third parties to handle this concern. | |
 
 
 ## Packages & Third Parties ##
-- `Redux` for ...
+- [`React-Router`](https://reacttraining.com/react-router/web) to manage web app routing.
+- [`Redux`](https://redux.js.org/) to manage the app state.
+- [`Redux-Sage`](https://redux-saga.js.org/) to manage the app side effects.
+- [`React-Redux`](https://react-redux.js.org/) to bind React with Redux.
+- [`node-sass`](https://github.com/sass/node-sass)
+- [`Jest`](https://jestjs.io/) for testing.
+- [`Enzyme Utility`](https://enzymejs.github.io/enzyme/) to test & shallow React components.
+- 
+	- charts (D3.js)
